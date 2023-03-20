@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  get("/", { :controller => "todos", :action => "index" })
 
   # Routes for the Todo resource:
 
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get("/todos", { :controller => "todos", :action => "index" })
   
   get("/todos/:path_id", { :controller => "todos", :action => "show" })
+  #get("/todos/:path_id", { :controller => "todos", :action => "show1" })
   
   # UPDATE
   
