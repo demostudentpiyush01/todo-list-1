@@ -25,11 +25,11 @@
       </div>
   
       <div class="next_up" style="color: darkorange;" >
-          <ul>
-            <li>
+          
+            <ul>
             <h2>Next Up</h2>
-            </li>
-          </ul>
+            </ul>
+          
           <% @list_next_up.each do |a_todo| %>
         
             <ul>
@@ -58,7 +58,7 @@
             <li>
               <div style="color: darkgreen;><%= a_todo.content %></div>         
           
-              <small style="color: darkgreen;>Added<%= time_ago_in_words(a_todo.updated_at) %> ago <a href="/delete_todo/<%= a_todo.id %>">delete</a>
+              <small style="color: darkgreen:>Added<%= time_ago_in_words(a_todo.updated_at) %> ago <a href="/delete_todo/<%= a_todo.id %>">delete</a>
               </small>
               <form action="/modify_todo/<%= a_todo.id %>" method="post">
                 <input type="hidden" name="query_status" value="done">
@@ -79,10 +79,9 @@
             <ul>
               <li>
               <div><%= a_todo.content %></div>         
-          
-              <small><%= a_todo.updated_at.time.starftime("Completed at %l:%M%P on %d-%b-%Y") %> 
-              <a href="/delete_todo/<%= a_todo.id %>">delete</a>
+              <small style="color: darkgrey;">Added<%= time_ago_in_words(a_todo.updated_at) %> ago <a href="/delete_todo/<%= a_todo.id %>">delete</a>
               </small>
+              
               
               </li>
             </ul>
