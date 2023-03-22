@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get("/", { :controller => "todos", :action => "index" })
+ 
 
   # Routes for the Todo resource:
 
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   #------------------------------
 
   # Routes for the User account:
+  get("/", { :controller => "todos", :action => "index" })
 
   # SIGN UP FORM
   get("/user_sign_up", { :controller => "user_authentication", :action => "sign_up_form" })        
